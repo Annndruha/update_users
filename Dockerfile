@@ -11,7 +11,7 @@ ADD ./ update_users/
 WORKDIR update_users
 
 # Update Base image
-RUN apk update && apk pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Specify the port number the container should expose 
 EXPOSE 1440
