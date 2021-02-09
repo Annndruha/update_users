@@ -11,11 +11,7 @@ ADD ./ update_users/
 WORKDIR update_users
 
 # Update Base image
-RUN apk update && \
-    apk add --no-cache --virtual build-deps gcc python-dev musl-dev && \
-    apk add --no-cache postgresql-dev && \
-	pip install --no-cache-dir -r requirements.txt && \
-	apk del build-deps
+RUN apk update && apk pip install --no-cache-dir -r requirements.txt
 
 # Specify the port number the container should expose 
 EXPOSE 1440
