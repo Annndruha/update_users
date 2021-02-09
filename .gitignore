@@ -1,0 +1,7 @@
+.vs*
+.vs/
+.vscode/
+.vscode/*
+.git/
+temp.png
+__pycache__/
