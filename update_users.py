@@ -51,9 +51,10 @@ start_time = time.time()
 while True:
         try:
             add_users_data()
-        except:
+        except Exception as err:
             # reconnect_vk()
             # reconnect_db()
-            print('===RECONNECT at ' +  datetime.datetime.strftime(datetime.datetime.now(), "%Y.%m.%d %H:%M:%S"))
+            # print('===RECONNECT at ' +  datetime.datetime.strftime(datetime.datetime.now(), "%Y.%m.%d %H:%M:%S"))
+            print(err)
             time.sleep(10)
         time.sleep(60.0 - ((time.time() - start_time) % 60.0))

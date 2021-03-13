@@ -7,6 +7,13 @@ Check online status community members and add it to database
 Please, use it in another docker container. It must be run always.
 
 Next, description functions in PostgreSQL database to use:
+```sql
+CREATE TABLE sessiyabot.online (
+	id int8 NULL,
+	tstamp timestamp(0) NULL,
+	status bool NULL
+);
+```
 
 + Main function: add user online-status to database (and delete old records)
 
